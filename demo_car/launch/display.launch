@@ -6,7 +6,7 @@
     default="False" />
   <param
     name="robot_description"
-    textfile="$(find damo_car)/robots/damo_car.urdf" />
+    textfile="$(find demo_car)/robots/demo_car.urdf" />
   <param
     name="use_gui"
     value="$(arg gui)" />
@@ -22,5 +22,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find damo_car)/urdf.rviz" />
+    args="-d $(find demo_car)/urdf.rviz" />
 </launch>

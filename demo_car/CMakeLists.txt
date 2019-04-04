@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(damo_car)
+project(demo_car)
 
 find_package(catkin REQUIRED)
 
