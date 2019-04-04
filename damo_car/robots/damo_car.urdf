@@ -1,0 +1,149 @@
+<robot
+  name="damo_car">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0073055 -0.014956 0.14475"
+        rpy="0 0 0" />
+      <mass
+        value="0.16184" />
+      <inertia
+        ixx="0.00032204"
+        ixy="1.7421E-21"
+        ixz="-4.8145E-20"
+        iyy="0.00044301"
+        iyz="8.4706E-06"
+        izz="0.0001277" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damo_car/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damo_car/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_R_Link">
+    <inertial>
+      <origin
+        xyz="0 0.005 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.019439" />
+      <inertia
+        ixx="3.2296E-06"
+        ixy="-4.2967E-38"
+        ixz="1.3256E-37"
+        iyy="6.1353E-06"
+        iyz="4.1135E-22"
+        izz="3.2296E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damo_car/meshes/wheel_R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damo_car/meshes/wheel_R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_R"
+    type="continuous">
+    <origin
+      xyz="-0.043695 -0.1875 -0.015982"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_R_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="wheel_L_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.005 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.019439" />
+      <inertia
+        ixx="3.2296E-06"
+        ixy="-5.9881E-39"
+        ixz="2.0404E-37"
+        iyy="6.1353E-06"
+        iyz="4.108E-22"
+        izz="3.2296E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damo_car/meshes/wheel_L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://damo_car/meshes/wheel_L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_L"
+    type="continuous">
+    <origin
+      xyz="0.058305 -0.1875 -0.015982"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_L_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
